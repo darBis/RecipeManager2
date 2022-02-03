@@ -44,12 +44,12 @@ public class FlagBiome extends Flag {
     @Override
     protected String[] getExamples() {
         String[] description = new String[]{
-            "{flag} " + Biome.JUNGLE.name().toLowerCase() + ", " + Biome.JUNGLE_HILLS.name().toLowerCase(),
+            "{flag} " + Biome.JUNGLE.name().toLowerCase() /*+ ", " + Biome.JUNGLE_HILLS.name().toLowerCase()*/,
         };
 
         String mushrooms = "{flag} ";
         if (Version.has1_13BasicSupport()) {
-            mushrooms += "!" + Biome.MUSHROOM_FIELDS.name().toLowerCase() + ", !" + Biome.MUSHROOM_FIELD_SHORE.name().toLowerCase();
+            mushrooms += "!" + Biome.MUSHROOM_FIELDS.name().toLowerCase() /*+ ", !" + Biome.MUSHROOM_FIELD_SHORE.name().toLowerCase()*/;
         } else if (Version.has1_9Support()) {
             mushrooms += "!mushroom_island, !mushroom_island_shore";
         } else {
