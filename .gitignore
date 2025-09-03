@@ -15,3 +15,6 @@ build/
 # Intellij
 *.iml
 .idea/
+
+#PaperMC run folder
+run/

@@ -1,6 +1,10 @@
+plugins {
+    id 'xyz.jpenilla.run-paper' version '2.3.1'
+}
+
 dependencies {
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
-    implementation 'org.spigotmc:spigot-api:1.21.7-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:spigot-api:1.21.8-R0.1-SNAPSHOT'
     implementation project(':RecipeManager-bukkit')
     implementation project(':RecipeManager-common')
 
@@ -19,6 +23,11 @@ dependencies {
 task copyJar(type: Copy) {
     from jar
     into '../build/libs/'
+}
+
+runServer {
+    minecraftVersion ("1.21.8")
+    jvmArgs ("-DPaper.IgnoreJavaVersion=true", "-Dcom.mojang.eula.agree=true")
 }
 
 build.dependsOn copyJar
