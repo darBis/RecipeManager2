@@ -203,7 +203,7 @@ public class CompostEvents extends BaseRecipeEvents {
                     if (!recipe.isMultiResult()) {
                         ItemResult recipeResult = recipe.getFirstResult();
 
-                        if (recipeResult.hashCode() == CompostRecipe.VANILLA_ITEM_RESULT.hashCode()) {
+                        if (recipeResult.getItemStack().hashCode() == CompostRecipe.VANILLA_ITEM_RESULT.getItemStack().hashCode()) {
                             matchesVanillaResult = true;
                         }
                     }
